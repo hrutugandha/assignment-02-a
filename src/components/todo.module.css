@@ -1,0 +1,30 @@
+.todoContainer{
+
+    height: 46px;
+    padding: 10px;
+}
+
+.todo{
+    background-color: #cecece;
+}
+.todoDiv{
+    width: 250px;
+    height: 100%;
+    margin-left: 660px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.text{
+    font-size: 20px;
+}
+.checkbox{
+    margin-top: 8px;
+}
+
+.striked{
+    text-decoration: line-through;
+}
