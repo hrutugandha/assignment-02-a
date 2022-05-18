@@ -1,4 +1,5 @@
 import React from 'react'
+import "../App.css"
 
 
 function Todo (){
@@ -8,17 +9,26 @@ function Todo (){
 // update todos
 // re-render todos when updated
 
-let [value,setValue] = React.useState("");
-const [todos,setTodos] = React.useState([]);
+const [query,setQuery] = React.useState("");
+const [todoList, setTodoList] = React.useState([]);
+
+const handleAdd = () =>{
+  const payload = {
+    title: query,
+    status: false,
+    checked: false,
+  }
+  setTodoList([...todoList, payload]);
+}
 
   return (
     <div>
       <h1>Todo Application</h1>
-      <input type="text" />
-      {todos.map((todo) => {
-        return <div>{todo}</div>
+      <input type="text" value ={query} onChange={(e) => setQuery(e.target.value)} placeholder="Add something..."/>
+      <button onClick={handleAdd}>Add</button>
+      {todoList.map((todo) => {
+        return <div>{todo.title}</div>
       })}
-      <button>Add</button>
     </div>
   )
 }
