@@ -24,11 +24,11 @@ const handleAdd = () =>{
   return (
     <div>
       <h1>Todo Application</h1>
-      <input type="text" value ={query} onChange={(e) => setQuery(e.target.value)} placeholder="Add something..."/>
-      <button onClick={handleAdd}>Add</button>
       {todoList.map((todo) => {
         return <div>{todo.title}</div>
       })}
+      <input type="text" value ={query} onChange={(e) => setQuery(e.target.value)} placeholder="Add something..."/>
+      <button onClick={handleAdd}>Add</button>
     </div>
   )
 }
